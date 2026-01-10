@@ -29,6 +29,17 @@ function findWinner(userChoice, computerChoice){
     return "Draw";
 }
 
+/* TODO: 
+
+- Change "User" to "You" in text outputs
+- Add player and computer score tracking
+- Add player and computer score HTML elements
+- Add restart button element
+- Add best of 5 to game over
+- Add a restart game button on game over
+- Add better feedback on the result bar when it changes (so that similar selections can be clearly seen as new messages)
+*/
+
 function playGame(userChoice){
     const computerChoice = getComputerChoice()
 
