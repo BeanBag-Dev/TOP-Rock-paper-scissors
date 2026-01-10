@@ -1,10 +1,14 @@
 :root {
-    --button-color: rgb(188, 255, 255);
-    --button-hover: rgb(0, 0, 0);
+    --button-color: #66acf2;
+    --button-hover: #8cc1f5;
+    --button-click: #bddaf7;
+    --website-header: #2D3748;
+    --website-background: #CBD5E0;
+    --text-color: #FAFAFA;
 }
 
 * {
-    /* border: solid red .1px; */
+    border: solid red .1px;
 }
 
 /* Global */
@@ -12,19 +16,22 @@
 body {
     margin: 0px;
     font-family: "Roboto", sans-serif;
+    background-color: var(--website-background);
 }
 
 button {
     background-color: var(--button-color);
+    color: var(--text-color);
     border: var(--button-color) 2px solid;
     scale: 1;
+    text-shadow: rgba(0,0,0,.3) 1px 0 3px;
 
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     width: 200px;
     font-size: 30px;
 
-    transition: scale .3s ease-in-out,
+    transition: scale .1s ease-in-out,
                 background-color .2s ease-in-out,
                 border-color .2s ease-in-out;
 }
@@ -32,7 +39,12 @@ button {
 button:hover{
     scale: 1.05;
     background-color: var(--button-hover);
-    border-color: var(--button-hover) 2px solid;
+    border-color: var(--button-hover);
+}
+
+button:active{
+    scale: 1;
+    background-color: var(--button-click);
 }
 
 /* Header */
@@ -45,8 +57,8 @@ button:hover{
     align-items: center;
     gap: 8px;
 
-    color: white;
-    background-color: rgb(88, 88, 88);
+    color: var(--text-color);
+    background-color: var(--website-header);
 }
 
 .header h1{
@@ -65,4 +77,25 @@ button:hover{
     gap: 20px;
     justify-content: center;
     padding: 50px;
+}
+
+/* Result */
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.result p{
+    /* display: none; */
+    padding: 10px 15px 10px 15px;
+    background-color: #d39942;
+    text-shadow: rgba(0,0,0,.3) 1px 0 3px;
+    /* background-color: #d35f42; */
+    /* background-color: #6bd342; */
+    color: var(--text-color);
+    border-radius: 10px;
+    font-weight: 700;
 }
