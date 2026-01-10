@@ -1,8 +1,68 @@
 :root {
-
+    --button-color: rgb(188, 255, 255);
+    --button-hover: rgb(0, 0, 0);
 }
 
+* {
+    /* border: solid red .1px; */
+}
+
+/* Global */
+
 body {
+    margin: 0px;
     font-family: "Roboto", sans-serif;
 }
 
+button {
+    background-color: var(--button-color);
+    border: var(--button-color) 2px solid;
+    scale: 1;
+
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    font-size: 30px;
+
+    transition: scale .3s ease-in-out,
+                background-color .2s ease-in-out,
+                border-color .2s ease-in-out;
+}
+
+button:hover{
+    scale: 1.05;
+    background-color: var(--button-hover);
+    border-color: var(--button-hover) 2px solid;
+}
+
+/* Header */
+
+.header {
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+    background-color: rgb(88, 88, 88);
+}
+
+.header h1{
+    margin: 0px;
+    padding: 10px;
+}
+
+.header p{
+    margin: 0px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
+}
