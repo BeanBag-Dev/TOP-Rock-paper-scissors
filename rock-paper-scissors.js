@@ -41,8 +41,10 @@ function playGame(userChoice){
 }
 
 
-rockBtn.addEventListener("click", () => playGame("🪨 Rock"));
+document.addEventListener("DOMContentLoaded", () => {
+    rockBtn.addEventListener("click", () => playGame("🪨 Rock"));
 
-paperBtn.addEventListener("click", () => playGame("📄 Paper"));
+    paperBtn.addEventListener("click", () => playGame("📄 Paper"));
 
-scissorsBtn.addEventListener("click", () => playGame("✂️ Scissors"));
+    scissorsBtn.addEventListener("click", () => playGame("✂️ Scissors"));
+})
