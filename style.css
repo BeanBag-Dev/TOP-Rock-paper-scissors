@@ -8,7 +8,7 @@
 }
 
 * {
-    border: solid red .1px;
+    /* border: solid red .1px; */
 }
 
 /* Global */
@@ -89,7 +89,7 @@ button:active{
 }
 
 .result p{
-    /* display: none; */
+    display: none;
     padding: 10px 15px 10px 15px;
     background-color: #d39942;
     text-shadow: rgba(0,0,0,.3) 1px 0 3px;
