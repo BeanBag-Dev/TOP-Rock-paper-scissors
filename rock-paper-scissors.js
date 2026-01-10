@@ -1,32 +1,28 @@
 const options = ["🪨 Rock", "📄 Paper", "✂️ Scissors"];
 
-let rockBtn, paperBtn, scissorsBtn, resultBar;
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+const resultBar = document.querySelector(".result p");
 
-// This function only runs once EVERYTHING is ready
-window.onload = () => {
-    rockBtn = document.getElementById("rock");
-    paperBtn = document.getElementById("paper");
-    scissorsBtn = document.getElementById("scissors");
-    resultBar = document.querySelector(".result p");
+rockBtn.addEventListener("click", () => playGame("🪨 Rock"));
+paperBtn.addEventListener("click", () => playGame("📄 Paper"));
+scissorsBtn.addEventListener("click", () => playGame("✂️ Scissors"));
 
-    // Add your listeners here
-    rockBtn.addEventListener("click", () => playGame("Rock"));
-    paperBtn.addEventListener("click", () => playGame("Paper"));
-    scissorsBtn.addEventListener("click", () => playGame("Scissors"));
-};
 
 function getComputerChoice(){
     return options[Math.floor(Math.random() * options.length)];
 }
 
 function findWinner(userChoice, computerChoice){
+                console.log(userChoice)
     if (userChoice != computerChoice){
         if (userChoice === "🪨 Rock"){
             return computerChoice === "✂️ Scissors" ? "User" : "Computer";
         } else if (userChoice === "📄 Paper") {
             return computerChoice === "✂️ Scissors" ? "Computer" : "User";
         } else if (userChoice === "✂️ Scissors") {
-            return computerChoice === "🪨 Rock" ? "Computer" : "User";
+            return computerChoice === "Rock" ? "Computer" : "User";
         }    
     }
 
