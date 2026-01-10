@@ -1,9 +1,19 @@
 const options = ["🪨 Rock", "📄 Paper", "✂️ Scissors"];
 
-const rockBtn = document.getElementById("rock")
-const paperBtn = document.getElementById("paper")
-const scissorsBtn = document.getElementById("scissors")
-const resultBar = document.querySelector(".result p")
+let rockBtn, paperBtn, scissorsBtn, resultBar;
+
+// This function only runs once EVERYTHING is ready
+window.onload = () => {
+    rockBtn = document.getElementById("rock");
+    paperBtn = document.getElementById("paper");
+    scissorsBtn = document.getElementById("scissors");
+    resultBar = document.querySelector(".result p");
+
+    // Add your listeners here
+    rockBtn.addEventListener("click", () => playGame("Rock"));
+    paperBtn.addEventListener("click", () => playGame("Paper"));
+    scissorsBtn.addEventListener("click", () => playGame("Scissors"));
+};
 
 function getComputerChoice(){
     return options[Math.floor(Math.random() * options.length)];
@@ -39,12 +49,3 @@ function playGame(userChoice){
     }
     
 }
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    rockBtn.addEventListener("click", () => playGame("🪨 Rock"));
-
-    paperBtn.addEventListener("click", () => playGame("📄 Paper"));
-
-    scissorsBtn.addEventListener("click", () => playGame("✂️ Scissors"));
-})
