@@ -5,6 +5,7 @@
     --website-header: #2D3748;
     --website-background: #CBD5E0;
     --text-color: #FAFAFA;
+    --black-text: #292929;
 }
 
 * {
@@ -98,4 +99,26 @@ button:active{
     color: var(--text-color);
     border-radius: 10px;
     font-weight: 700;
+}
+
+/* score holder */
+.score-holder{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+    color: var(--black-text);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* restart */
+
+.restart-holder{
+    display: flex;
+    justify-content: center;
+}
+
+#restart {
+    display: none;
 }
