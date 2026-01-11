@@ -49,7 +49,7 @@ function checkGameEnd(){
     if (userScore == 5 || computerScore == 5){
         gameRunning = false;
         restartBtn.style.display = "block";
-        resultBar.textContent = `GAME OVER! ${userScore == 5 ? "You" : "The Computer"} wins!`;
+        resultBar.textContent = `GAME OVER! ${userScore == 5 ? "You win!" : "The Computer wins!"}`;
         resultBar.style.backgroundColor = computerScore == 5 ? "#d35f42" : "#6bd342";
     }
 }
